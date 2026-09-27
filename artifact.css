@@ -1,0 +1,208 @@
+/* =========================================================
+   Artifact detail pages — extends style.css tokens
+   ========================================================= */
+
+.artifact-page-header{
+  background: var(--navy);
+  color: var(--paper);
+  padding: 64px 32px 56px;
+}
+
+.artifact-page-header .section-inner{ max-width: var(--max-width); }
+
+.artifact-back{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #C9D4E0;
+  text-decoration: none;
+  font-size: 0.92rem;
+  margin-bottom: 24px;
+}
+.artifact-back:hover{ color: var(--amber); }
+
+.artifact-eyebrow{
+  color: var(--amber);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.artifact-page-header h1{
+  color: var(--paper);
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  margin-bottom: 14px;
+}
+
+.artifact-page-header .artifact-dek{
+  color: #DCE3EA;
+  font-size: 1.05rem;
+  max-width: 62ch;
+  margin: 0;
+}
+
+.artifact-body{
+  padding: 64px 0 96px;
+}
+
+.artifact-body .section-inner{ max-width: 860px; }
+
+.artifact-body h2{
+  font-size: 1.4rem;
+  margin-top: 48px;
+  margin-bottom: 16px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+.artifact-body h2:first-child{ margin-top: 0; padding-top: 0; border-top: none; }
+
+.artifact-body h3{
+  font-size: 1.1rem;
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
+.artifact-body p{ max-width: 68ch; color: var(--charcoal); }
+
+.artifact-body ul{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 0 20px;
+}
+.artifact-body ul li{
+  position: relative;
+  padding-left: 22px;
+  color: var(--charcoal);
+  max-width: 66ch;
+}
+.artifact-body ul li::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  background: var(--amber);
+  border-radius: 50%;
+}
+
+.artifact-body ol{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 0 20px;
+  padding-left: 22px;
+}
+.artifact-body ol li{ color: var(--charcoal); max-width: 66ch; }
+
+.info-card{
+  background: var(--paper-alt);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  margin: 20px 0;
+}
+.info-card p:last-child{ margin-bottom: 0; }
+
+.prompt-block{
+  background: var(--navy);
+  color: var(--paper);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 16px 0;
+  font-size: 0.96rem;
+}
+.prompt-block .prompt-label{
+  display: block;
+  color: var(--amber);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+.prompt-block p{ color: var(--paper); margin: 0; max-width: none; }
+
+.data-table{
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0 28px;
+  font-size: 0.92rem;
+}
+.data-table th, .data-table td{
+  text-align: left;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  vertical-align: top;
+}
+.data-table th{
+  background: var(--paper-alt);
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.storyboard-screen{
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--amber);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  margin-bottom: 20px;
+}
+.storyboard-screen h3{
+  margin-top: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.storyboard-screen .screen-number{
+  font-family: var(--font-display);
+  color: var(--amber);
+  font-size: 0.95rem;
+}
+.storyboard-screen .screen-time{
+  margin-left: auto;
+  font-size: 0.82rem;
+  color: var(--charcoal-soft);
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+.storyboard-screen dl{
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 6px 16px;
+  margin: 0;
+}
+.storyboard-screen dt{
+  font-weight: 600;
+  color: var(--slate);
+  font-size: 0.88rem;
+}
+.storyboard-screen dd{
+  margin: 0;
+  color: var(--charcoal);
+  font-size: 0.92rem;
+}
+
+.module-heading{
+  font-family: var(--font-display);
+  color: var(--slate);
+  font-size: 0.85rem;
+  text-transform: none;
+  letter-spacing: 0.01em;
+  margin: 36px 0 4px;
+}
+
+.artifact-nav-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 56px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 640px){
+  .storyboard-screen dl{ grid-template-columns: 1fr; }
+  .storyboard-screen dt{ margin-top: 8px; }
+}
